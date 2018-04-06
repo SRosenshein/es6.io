@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>var Scoping</title>
+</head>
+<body>
+
+<!-- <script type="text/javascript">
+	
+	var width = 100;
+	let height = 200;
+	const key = 'abc123';
+
+	var age = 100;
+	if (age > 12) {
+		var dogYears = age * 7;
+	}
+	// dogYears is available outside this if block because var variables are "function scoped"
+
+	var age = 100;
+	if (age > 12) {
+		let dogYears = age * 7;
+	}
+	// let and const is "block scoped". dogYears is not available in global
+
+	for example,
+
+		let points = 60;
+		let winner = false;
+
+		if (points > 40) {
+			let winner = true;
+		}
+
+		console.log(winner) // false because winner in if block is a separate variable in separate scope
+
+</script> -->
+
+<script>
+// Temporal Dead Zone
+	
+	console.log(pizza); // This would return undefined because let variables gets hoisted up
+	
+	let pizza = "deep dish";
+
+	console.log(food); // This would return an error because const variables do NOT get hoisted up
+	//
+	//
+	// The "Temporal Dead Zone"
+	//
+	//
+	const food = "burger";
+
+
+</script>
+
+
+</body>
+</html>
