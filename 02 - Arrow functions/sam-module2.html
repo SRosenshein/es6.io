@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Arrow Functions</title>
+</head>
+<body>
+
+<script>
+
+	const names = ['Joe', 'Jim', 'Kyle'];
+
+	// Arrow functions are always anonymous
+
+	const fullNames = names.map(name => `${name} Bob` ); // Remove brackets for Implicit return
+
+	console.log(fullNames);
+
+</script>
+
+<script>
+
+	const race = '100m Dash';
+	const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
+
+	const win = winners.map((winner, i) => ({name: winner, race: race, place: i + 1 }));
+
+	console.table(win);
+
+
+</script>	
+
+<script>
+	// Default Function Arguments
+
+	function calculateBill(total, tax = 0.13, tip = 0.15) {
+		return total + (total * tax) + (total * tip);
+	}
+
+	const totalBill = calculateBill(100, null, 0.15);
+	console.log(`Your bill is $${totalBill}`);
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
