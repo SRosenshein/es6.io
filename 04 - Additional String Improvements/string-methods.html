@@ -16,13 +16,21 @@ const model = 'x5';
 const colour = 'Royal Blue';
 
 // .startsWith()
+courts.startsWith('RFB'); // true
+// not case-sensitive
+flightNumber.startsWith('AC'); // false
+flightNumber.startsWith('AC', 3); // true - starts at index 3
 
 // .endsWith()
+flightNumber.endsWith('jz'); // true
+
+accountNumber.endsWith('RT') // false
+accountNumber.endsWith('RT', 11) // true - only looks at first 11 characters
 
 // .includes()
+flightNumber.includes('AC'); // true
 
 // .repeat()
-
 function leftPad(str, length = 20) {
   return `→ ${' '.repeat(length - str.length)}${str}`;
 }
