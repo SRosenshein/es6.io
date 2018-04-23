@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Element Destructuring</title>
+</head>
+<body>
+
+<h2>Element Destructuring</h2>
+
+<script>
+	// Object Destructuring
+
+	const person = {
+		first: 'Sam',
+		last: 'Roenshein',
+		country: 'USA',
+		city: 'Hoboken',
+		links: {
+			social: {
+				twitter: '@srosenshein76',
+				facebook: 'Facebook Profile'
+			}
+		}
+	};
+
+	const { first, last } = person; //equivalent to const first = person.first; const last = person.last;
+
+	const { twitter: tweet, facebook: fb } = person.links.social; //pulls our twitter and facebook variables and renames them
+
+	//Can also set defaults
+
+	const { first = 'Jim', last = 'Bob', city = 'Portland', age = 25 } = person; //all variables except age will be desctructured (overwritten) from person object. age variable will be default value of 25
+
+
+</script>
+
+<script>
+	// Array Destructuring
+	const details = ['Sam R', 123, 'sam@gmail.com'];
+	// const name = details[0];
+	// const number = details[1]; :(
+	// const email = details[2];
+
+	const [name, number, email] = details; // !!!
+
+
+	const team = ['Joe', 'Sam', 'Ryan', 'Rich', 'Adam']; //Joe is captain, sam is assistant, rest are team members
+
+	const [captain, assistant, ...players] = team; //rest operator (...players) puts remaining values into players array;
+
+
+</script>
+
+<script>
+	// Swapping variables
+
+  let inRing = 'Hulk Hogan';
+  let onSide = 'The Rock';
+
+  console.log(inRing, onSide);
+  [inRing, onSide] = [onSide, inRing];
+  console.log(inRing, onSide);
+
+</script>
+
+
+
+</body>
+</html>
